@@ -1,0 +1,18 @@
+.outer {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  place-items: center;
+}
+.green-check {
+  font-size: 300%;
+  color: #1e6314;
+}
+.red-cross {
+  font-size: 150%;
+  color: #660e19;
+}
+.label {
+  font-size: 130%;
+  font-weight: bold;
+}

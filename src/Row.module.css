@@ -1,0 +1,45 @@
+.row {
+  background-color: #ffd1d1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  gap: 2rem;
+}
+
+.row.active {
+  background-color: #d2ffd1;
+}
+
+.row.editing {
+  background-color: #feffd1;
+}
+
+.row > div:last-child {
+  margin-left: auto;
+}
+
+.name {
+  font-size: 140%;
+  font-weight: bold;
+}
+
+.last-notified {
+  font-size: 80%;
+}
+
+.edit-details {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  flex-grow: 1;
+  gap: 1rem;
+}
+
+.edit-name {
+  font-size: 140%;
+  font-weight: bold;
+  flex: 1 1;
+  width: 6rem;
+}
