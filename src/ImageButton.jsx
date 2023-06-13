@@ -17,4 +17,5 @@ ImageButton.propTypes = {
   ImageComponent: PropTypes.elementType,
 };
 
-export default memo(ImageButton);
+const ImageButtonMemo = memo(ImageButton);
+export default ImageButtonMemo;

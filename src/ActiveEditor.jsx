@@ -12,7 +12,7 @@ const useStateWithDependencies = (startValue, dependencies) => {
       setState(startValue);
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    dependencies,
+    dependencies
   );
   return [state, setState];
 };
@@ -32,7 +32,7 @@ const buttonCaption = (state) => {
 const ActiveEditor = ({ active, onChange }) => {
   const [state, setState] = useStateWithDependencies(
     active ? 'active' : 'inactive',
-    [active],
+    [active]
   );
 
   const changeState = useCallback(() => {
@@ -65,4 +65,5 @@ ActiveEditor.propTypes = {
   onChange: PropTypes.func.isRequired,
 };
 
-export default memo(ActiveEditor);
+const ActiveEditorMemo = memo(ActiveEditor);
+export default ActiveEditorMemo;

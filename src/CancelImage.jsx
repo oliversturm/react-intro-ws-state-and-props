@@ -25,4 +25,5 @@ CancelImage.propTypes = {
   height: PropTypes.string,
 };
 
-export default memo(CancelImage);
+const CancelImageMemo = memo(CancelImage);
+export default CancelImageMemo;

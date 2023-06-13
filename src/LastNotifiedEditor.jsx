@@ -23,4 +23,5 @@ LastNotifiedEditor.propTypes = {
   onChange: PropTypes.func.isRequired,
 };
 
-export default memo(LastNotifiedEditor);
+const LastNotifiedEditorMemo = memo(LastNotifiedEditor);
+export default LastNotifiedEditorMemo;

@@ -35,4 +35,5 @@ RowActions.propTypes = {
   onEditCancel: PropTypes.func.isRequired,
 };
 
-export default memo(RowActions);
+const RowActionsMemo = memo(RowActions);
+export default RowActionsMemo;

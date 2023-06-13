@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import produce from 'immer';
+import { produce } from 'immer';
 import { memo, useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 
@@ -31,10 +31,10 @@ const Row = ({ rowIndex, data, onChange }) => {
       setEditData(
         produce((d) => {
           d.active = newActive;
-        }),
+        })
       );
     },
-    [setEditData],
+    [setEditData]
   );
 
   const nameChanged = useCallback(
@@ -42,10 +42,10 @@ const Row = ({ rowIndex, data, onChange }) => {
       setEditData(
         produce((d) => {
           d.name = newName;
-        }),
+        })
       );
     },
-    [setEditData],
+    [setEditData]
   );
 
   const lastNotifiedChanged = useCallback(
@@ -53,10 +53,10 @@ const Row = ({ rowIndex, data, onChange }) => {
       setEditData(
         produce((d) => {
           d.lastNotified = newLastNotified;
-        }),
+        })
       );
     },
-    [setEditData],
+    [setEditData]
   );
 
   return (
@@ -67,7 +67,7 @@ const Row = ({ rowIndex, data, onChange }) => {
         onEditCancel={editCancel}
         onEditSaveChanges={editSaveChanges}
       />
-      {!!editData ? (
+      {editData ? (
         <>
           <div className={styles['edit-details']}>
             <input
@@ -104,4 +104,5 @@ Row.propTypes = {
   onChange: PropTypes.func.isRequired,
 };
 
-export default memo(Row);
+const RowMemo = memo(Row);
+export default RowMemo;

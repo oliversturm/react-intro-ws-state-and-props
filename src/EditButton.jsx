@@ -30,4 +30,5 @@ EditButton.propTypes = {
   onClick: PropTypes.func.isRequired,
 };
 
-export default memo(EditButton);
+const EditButtonMemo = memo(EditButton);
+export default EditButtonMemo;

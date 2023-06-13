@@ -25,4 +25,5 @@ SaveImage.propTypes = {
   height: PropTypes.string,
 };
 
-export default memo(SaveImage);
+const SaveImageMemo = memo(SaveImage);
+export default SaveImageMemo;

@@ -19,4 +19,5 @@ List.propTypes = {
   rowChanged: PropTypes.func.isRequired,
 };
 
-export default memo(List);
+const ListMemo = memo(List);
+export default ListMemo;

@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/accessible-emoji */
 import { memo } from 'react';
 import PropTypes from 'prop-types';
 
@@ -26,4 +25,5 @@ ActiveCheck.propTypes = {
   active: PropTypes.bool.isRequired,
 };
 
-export default memo(ActiveCheck);
+const ActiveCheckMemo = memo(ActiveCheck);
+export default ActiveCheckMemo;

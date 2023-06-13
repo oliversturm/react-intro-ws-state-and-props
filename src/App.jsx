@@ -1,7 +1,6 @@
-import produce, { freeze } from 'immer';
+import { produce, freeze } from 'immer';
 import { memo, useCallback, useState } from 'react';
 import List from './List';
-import './styles.css';
 
 const App = () => {
   const [subscribers, setSubscribers] = useState(
@@ -15,18 +14,18 @@ const App = () => {
         { name: 'Joe', active: false, lastNotified: '2020-05-18' },
         { name: 'Emma', active: true, lastNotified: '2022-01-03' },
       ],
-      true,
-    ),
+      true
+    )
   );
   const rowChanged = useCallback(
     (rowIndex, row) => {
       setSubscribers(
         produce((d) => {
           d[rowIndex] = row;
-        }),
+        })
       );
     },
-    [setSubscribers],
+    [setSubscribers]
   );
   return (
     <div className="App">
@@ -35,4 +34,5 @@ const App = () => {
   );
 };
 
-export default memo(App);
+const AppMemo = memo(App);
+export default AppMemo;
